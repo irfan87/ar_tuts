@@ -1,0 +1,7 @@
+<h1><%= @link.title %></h1>
+<p><%= @link.url_address %></p>
+<p>
+	Posted by <%= @link.user.email %>
+	at <%= time_ago_in_words(@link.created_at) %>
+</p>
+<%= link_to 'Back', root_path %>

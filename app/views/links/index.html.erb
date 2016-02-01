@@ -1,0 +1,15 @@
+
+<%= link_to 'Create New Link', new_link_path%>
+<div>
+	<h1>Link List</h1>
+	<ul>
+		<% @links.each do |link| %>
+		<li>
+			<h2>
+				<%= link_to link.title, link %>
+			</h2>
+			<p>Created at: <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %> </p>
+		</li>
+		<% end %>
+	</ul>
+</div>

@@ -8,7 +8,7 @@
 			<h2>
 				<%= link_to link.title, link %>
 			</h2>
-			<p>Created at: <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %> </p>
+			<p>Posted at <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %> </p>
 		</li>
 		<% end %>
 	</ul>
